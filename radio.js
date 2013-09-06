@@ -1,3 +1,9 @@
+// this plugin is used to change individual radio buttons to a radio button list ie to deselect the radio buttons when another radio button is checked.
+// the function is called when any of the radio button is checked.
+//contains another function change which is used for firing the action on radio button click.
+//group class name=inpit,
+//elemnet id=input1,input2
+
 (function($) {
 
    $.fn.radio = function() {
@@ -9,7 +15,7 @@
 			
          $('.inpit').attr('checked', false);
 		   $(this).attr('checked', true);
-		   // $( this ).change();
+		    $( this ).change();
 			 }
 	  
  
@@ -28,11 +34,19 @@
 			
       if($(this).attr('id')=="input1")
 	  {
-		  $("#form_id").show();
+		  alert("you clicked one");
 	  }
 	  else if($(this).attr('id')=="input2")
 	  {
-		   $("#form_id").hide();
+		  alert("you clicked two");
+	  }
+	   else if($(this).attr('id')=="input3")
+	  {
+		  alert("you clicked three");
+	  }
+	   else if($(this).attr('id')=="input4")
+	  {
+		  alert("you clicked four");
 	  }
 			 }
 	  
@@ -46,7 +60,9 @@
 
 }(jQuery))
 
-
+$(function(){
+	$('.inpit').attr('checked', false);
+});
 
 $(' input[type=radio][class=inpit] ').live('change',function(event) {
 	
