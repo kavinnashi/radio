@@ -4,7 +4,8 @@
 //group class name=inpit,
 //elemnet id=input1,input2
 //this is for jquery 1.4.2 
-// for higher version change the live() to on()
+// for latest version change the live() to on()
+//and attr () to prop 
 
 (function($) {
 
